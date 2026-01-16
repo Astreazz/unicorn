@@ -200,7 +200,7 @@ source_path=$(cd "$(dirname -- "$0")"; pwd)
 
 if printf %s\\n "$source_path" "$PWD" | grep -q "[[:space:]:]";
 then
-  error_exit "main directory cannot contain spaces nor colons"
+  error_exit "main directory $source_path or $PWD cannot contain spaces nor colons"
 fi
 
 # default parameters
